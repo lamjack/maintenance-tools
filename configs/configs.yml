@@ -1,0 +1,7 @@
+# This file is auto-generated during the composer install
+configs:
+    mysql_host: 127.0.0.1
+    mysql_user: root
+    mysql_password: null
+    qiniu_access_key: null
+    qiniu_secret_key: null

@@ -1,0 +1,43 @@
+{
+    "name": "jack/maintenance-tools",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jack",
+            "email": "linjue@wilead.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {
+        "symfony/console": "^3.2",
+        "qiniu/php-sdk": "^7.1",
+        "incenteev/composer-parameter-handler": "^2.1",
+        "symfony/dependency-injection": "^3.2"
+    },
+    "scripts": {
+        "scripts": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-install-cmd": [
+            "@scripts"
+        ],
+        "post-update-cmd": [
+            "@scripts"
+        ]
+    },
+    "extra": {
+        "incenteev-parameters": {
+            "file": "configs/configs.yml",
+            "dist-file": "configs/configs.yml.sample",
+            "parameter-key": "configs"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^3.2"
+    }
+}

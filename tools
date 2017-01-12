@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
+if (!defined('PROJECT_ROOT')) {
+    define('PROJECT_ROOT', realpath(dirname(__FILE__)));
+}
+
+use Symfony\Component\Console\Application;
+use Command\MySQL;
+
+$application = new Application();
+$application->setName('WIZ Maintenance Tools');
+$application->setVersion('ver 0.0.1');
+
+$application->addCommands([
+    new MySQL\BackupCommand()
+]);
+
+$application->run();

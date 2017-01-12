@@ -1,0 +1,11 @@
+# 配置模板
+configs:
+    # 数据库
+    mysql_host:        127.0.0.1
+    mysql_port:        3306
+    mysql_user:        root
+    mysql_password:    ~
+
+    # 七牛云存储
+    qiniu_access_key:  ~
+    qiniu_secret_key:  ~
